@@ -10,9 +10,11 @@ alert("You are about to add two numbers.")
 number1 = parseInt(prompt("Enter a number:"));
 number2 = parseInt(prompt("Enter a second number:"));
 
-let add = function (number1, number2) {
-  return number1 + number2;
-}
+// let add = function (number1, number2) {
+//   return number1 + number2;
+// }
+
+let add = (number1, number2) => number1 + number2
 
 alert(add(number1, number2));
 
@@ -48,3 +50,17 @@ secondNumber = parseInt(prompt("Enter the second number: "));
 let multiply = (firstNumber, secondNumber) => firstNumber * secondNumber;
 
 alert(multiply(firstNumber, secondNumber));
+
+//Function to multiply two numbers
+
+let Num1;
+let Num2
+
+alert("You are about to divide two numbers");
+Num1 = parseInt(prompt("Enter the first number: "));
+Num2 = parseInt(prompt("Enter the second number: "));
+
+let divide = (Num1, Num2) => Num1 /Num2;
+
+alert(divide(Num1, Num2));
+
