@@ -1,66 +1,98 @@
-//This is for practice with seperation of logic - user interface/front-end logic and business logic/business-end
-// This is the back-end
-//Function that adds numbers
+// $(document).ready(function () {
+//   $("form .btn").click(function (event) {
 
-let number1;
-let number2;
+//     let numOne = parseInt(document.getElementById("numOne").value);
+//     let numTwo = parseInt(document.getElementById("numTwo").value);
+
+//     let answer=0;
+
+//     let add = function (dig1, dig2) {
+//       answer = dig1 + dig2;
+//       return answer;
+//     };
+
+//     let answerInput = add(numOne, numTwo);
+//     $(".answer").append(answerInput);
+//     $("#total").show();
+
+//     event.preventDefault();
+//   });
+// });
+
+//<------BACK-END------------>
+
+let answer = 0;
+let answerSubtract = 0;
+let answerMultiply = 0;
+let answerDivide = 0;
+
+let add = function (dig1, dig2) {
+  answer = dig1 + dig2;
+  return answer;
+};
+
+let subtract = function (dig1, dig2) {
+  answerSubtract = dig1 - dig2;
+  return answerSubtract;
+}
+
+let multiply = function(numOne, numTwo) {
+  answerMultiply = numOne * numTwo;
+  return answerMultiply;
+}
+
+let divide = function(numOne, numTwo) {
+  answerDivide = numOne/numTwo;
+  return answerDivide;
+}
 
 
-alert("You are about to add two numbers.")
-number1 = parseInt(prompt("Enter a number:"));
-number2 = parseInt(prompt("Enter a second number:"));
+//<--------USER END----------->
+$(document).ready(function () {
+  $("#add .btn").click(function (event) {
+    let numOne = parseInt(document.getElementById("numOne").value);
+    let numTwo = parseInt(document.getElementById("numTwo").value);
 
-// let add = function (number1, number2) {
-//   return number1 + number2;
-// }
+    let answerInput = add(numOne, numTwo);
+    $(".answer").text(answerInput);
+    $("#total").show();
 
-let add = (number1, number2) => number1 + number2
+    event.preventDefault();
+  });
 
-alert(add(number1, number2));
 
-//Function that subtracts numbers
-let digit1;
-let digit2;
+  $("#subtract .btn").click(function (event) {
+    let numOne = parseInt(document.getElementById("digOne").value);
+    let numTwo = parseInt(document.getElementById("digTwo").value);
 
-alert("You are about to subtract two numbers");
-digit1 = parseInt(prompt("Enter a digit: "));
-digit2 = parseInt(prompt("Enter a second digit:"));
+    let answerSubtract = subtract(numOne, numTwo);
+    $(".answerSubtract").text(answerSubtract);
+    $("#totalSubtract").show();
 
-// function subtract (digit1, digit2) {
-//   return digit1 - digit2
-// }
+    event.preventDefault();
+  });
 
-//Arrow function for above
-let subtract = (digit1, digit2) => digit1-digit2;
-alert(subtract(digit1, digit2));
+  $("#multiply .btn").click(function(event) {
+    let multiplyOne = parseInt(document.getElementById("multOne").value);
+    let multiplyTwo = parseInt(document.getElementById("multTwo").value);
 
-//Function to multiply two numbers
-let firstNumber;
-let secondNumber;
+    let answerInput = multiply(multiplyOne, multiplyTwo);
 
-alert("You are about to multiply two numbers");
-firstNumber = parseInt(prompt("Enter the first number: "));
-secondNumber = parseInt(prompt("Enter the second number: "));
+    $(".answerMultiply").text(answerInput);
+    $("#totalMultiply").show();
 
-// function multiply (firstNumber, secondNumber) {
-//   return firstNumber * secondNumber;
-// }
+    event.preventDefault();
+  });
 
-//Arrow function for above
-let multiply = (firstNumber, secondNumber) => firstNumber * secondNumber;
+  $("#divide .btn").click(function(event) {
+    let divideOne = parseInt(document.getElementById("divOne").value);
+    let divideTwo = parseInt(document.getElementById("divTwo").value);
 
-alert(multiply(firstNumber, secondNumber));
+    let answerInput = divide(divideOne, divideTwo);
 
-//Function to multiply two numbers
+    $(".answerDivide").text(answerInput);
+    $("#totalDivide").show();
 
-let Num1;
-let Num2
-
-alert("You are about to divide two numbers");
-Num1 = parseInt(prompt("Enter the first number: "));
-Num2 = parseInt(prompt("Enter the second number: "));
-
-let divide = (Num1, Num2) => Num1 /Num2;
-
-alert(divide(Num1, Num2));
-
+    event.preventDefault();
+  });
+});

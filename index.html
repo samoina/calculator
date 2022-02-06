@@ -1,9 +1,93 @@
-<html>
-  <head>
-    <title>Calculator</title>
-  </head>
-  <body>
-    <h1>Calculator</h1>
-    <script src="JS/app.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <form id="add">
+      <div class="form-group">
+        <label for="numOne">1st Number</label>
+        <input type="number" class="form-control" id="numOne">
+      </div>
+      <div class="form-group">
+        <label for="numTwo">2nd Number</label>
+        <input type="number" class="form-control" id="numTwo">
+      </div>
+      <button class="btn btn-primary" type="submit">Add numbers</button>
+    </form>
+
+    <div id="total">
+      <p>Your answer is <span class="answer"></span></p>
+    </div>
+
+
+
+    <form id="subtract">
+      <div class="form-group">
+        <label for="digOne">1st Number</label>
+        <input type="number" class="form-control" id="digOne">
+      </div>
+      <div class="form-group">
+        <label for="digTwo">2nd Number</label>
+        <input type="number" class="form-control" id="digTwo">
+      </div>
+      <button class="btn btn-primary" type="submit">Subtract numbers</button>
+    </form>
+
+    <div id="totalSubtract">
+      <p>Your answer is <span class="answerSubtract"></span></p>
+    </div>
+
+    <form id="multiply">
+      <div class="form-group">
+        <label for="multOne">1st Number</label>
+        <input type="number" class="form-control" id="multOne">
+      </div>
+      <div class="form-group">
+        <label for="multTwo">2nd Number</label>
+        <input type="number" class="form-control" id="multTwo">
+      </div>
+      <button class="btn btn-primary" type="submit">Multiply numbers</button>
+    </form>
+
+    <div id="totalMultiply">
+      <p>Your answer is <span class="answerMultiply"></span></p>
+    </div>
+
+
+    <form id="divide">
+      <div class="form-group">
+        <label for="divOne">1st Number</label>
+        <input type="number" class="form-control" id="divOne">
+      </div>
+      <div class="form-group">
+        <label for="divTwo">2nd Number</label>
+        <input type="number" class="form-control" id="divTwo">
+      </div>
+      <button class="btn btn-primary" type="submit">Divide numbers</button>
+    </form>
+
+    <div id="totalDivide">
+      <p>Your answer is <span class="answerDivide"></span></p>
+    </div>
+
+
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="JS/app.js"></script>
+</body>
+
 </html>
